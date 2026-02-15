@@ -1,4 +1,5 @@
 import os
+TEST_MODE = True  # Если True – оплата не списывается, а сразу засчитывается
 import json
 import logging
 from pathlib import Path
