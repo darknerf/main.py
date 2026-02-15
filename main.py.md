@@ -1,5 +1,4 @@
 import os
-TEST_MODE = True  # Если True – оплата не списывается, а сразу засчитывается
 import json
 import logging
 from pathlib import Path
@@ -7,6 +6,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKe
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackQueryHandler, PreCheckoutQueryHandler, ContextTypes
 
 # Токен берётся из переменной окружения (её зададим на хостинге)
+TEST_MODE = True  # Если True – оплата не списывается, а сразу засчитывается
 TOKEN = os.getenv("TOKEN")
 if not TOKEN:
     raise ValueError("Переменная окружения TOKEN не задана!")
